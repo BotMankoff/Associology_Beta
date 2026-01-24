@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -41,7 +41,7 @@
   h1 { 
     margin: 0; 
     font-size: 16px; 
-    font-weight: 700; 
+    font-weight: 700;
     color: white;
     white-space: nowrap;
     overflow: hidden;
@@ -837,7 +837,8 @@
   /* Welcome screen */
   .welcome-overlay {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0; left: 0; right: 0;
+    bottom: 0;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     z-index: 300;
     display: flex;
@@ -1052,7 +1053,8 @@
   .guess-modal {
     display: none;
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
     background: rgba(0,0,0,0.5);
     z-index: 200;
     align-items: flex-start;
@@ -1471,13 +1473,11 @@
 </head>
 <body>
 
-<!-- Welcome Screen -->
 <div class="welcome-overlay" id="welcome-overlay">
   <div class="welcome-content">
     <h1 class="welcome-title">ASSOCIOLOGY</h1>
     <p class="welcome-tagline">The Word Association Game</p>
     
-    <!-- Ring matching actual game layout -->
     <div class="welcome-board" id="welcome-board">
       <svg class="board-svg" id="welcome-svg" viewBox="0 0 500 500">
         <defs id="welcome-defs"></defs>
@@ -1487,20 +1487,19 @@
       <div class="center-word">?</div>
     </div>
     
-    <!-- Clear instructions -->
     <div class="welcome-instructions">
       <h2>How to Play</h2>
       
       <div class="instruction-item">
         <div class="instruction-label">The Ring</div>
-        The ring has <strong>4 themed quadrants</strong>. Each quadrant has 2 words that belong to it.
+        The ring has <strong>4 themed quadrants</strong>.
+        Each quadrant has 2 words that belong to it.
       </div>
       
       <div class="instruction-item">
         <div class="instruction-label">Anchors vs Bridges</div>
         <strong>4 words are "anchors"</strong> — they belong to just ONE theme.<br>
         <strong>4 words are "bridges"</strong> — they connect TWO adjacent themes.
-        
         <div class="bridge-demo">
           <div class="bridge-word-chip">LINE</div>
           <div class="bridge-meanings">
@@ -1518,7 +1517,8 @@
       
       <div class="instruction-item">
         <div class="instruction-label">Your Goal</div>
-        <strong>Tap two words to swap them.</strong> Arrange all 8 words correctly, then guess the mystery center word — one word that connects to all 4 themes.
+        <strong>Tap two words to swap them.</strong> Arrange all 
+        8 words correctly, then guess the mystery center word — one word that connects to all 4 themes.
         <div style="margin-top: 8px; font-size: 12px; opacity: 0.85; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 8px;">
           <strong>📖 Classic</strong> puzzles use dictionary words throughout.<br>
           <strong>🌍 Cultural</strong> puzzles may include famous names, brands, or places — as the mystery word or even among the clues.
@@ -1569,7 +1569,8 @@
 </nav>
 
 <div class="solved-banner" id="solved-banner">
-  🎉 Stage 1 solved in <span id="final-moves">0</span> moves! <strong>Tap the center</strong> to guess the word...
+  🎉 Stage 1 solved in <span id="final-moves">0</span> moves!
+  <strong>Tap the center</strong> to guess the word...
 </div>
 
 <div class="board" id="board">
@@ -1639,20 +1640,27 @@
     </div>
     <div class="modal-body">
       <p><strong>Stage 1 — Arrange the Ring</strong></p>
-      <p>Place 8 words around the ring so each belongs to its correct theme(s). <strong>Anchors</strong> (inside quadrants) belong to ONE theme. <strong>Bridges</strong> (on boundaries) belong to TWO adjacent themes.</p>
-      <p>Tap two words to swap them. Bridges show split coloring as you solve — only the half inside a completed quadrant turns green.</p>
+      <p>Place 8 words around the ring so each belongs to its correct theme(s).
+      <strong>Anchors</strong> (inside quadrants) belong to ONE theme. <strong>Bridges</strong> (on boundaries) belong to TWO adjacent themes.</p>
+      <p>Tap two words to swap them.
+      Bridges show split coloring as you solve — only the half inside a completed quadrant turns green.</p>
       <p><strong>Stage 2 — Find the Center Word</strong></p>
-      <p>Once all words are placed, tap the center to enter guessing mode. The center expands so you can type your answer directly into it.</p>
-      <p>The mystery word connects ALL 4 themes through different meanings. For example, if the themes were THEATER, FISHING, MEDICINE, and METALWORK, the center word might be CAST (cast of actors / cast a line / arm cast / cast molten metal).</p>
+      <p>Once all words are placed, tap the center to enter guessing mode.
+      The center expands so you can type your answer directly into it.</p>
+      <p>The mystery word connects ALL 4 themes through different meanings.
+      For example, if the themes were THEATER, FISHING, MEDICINE, and METALWORK, the center word might be CAST (cast of actors / cast a line / arm cast / cast molten metal).</p>
       <p><strong>Use the ring words!</strong> Tap any word on the ring to see how it connects to its theme(s) — this may help you find the center word.</p>
-      <p><strong>Need more help?</strong> Use the "Get Hint" button below the puzzle to reveal crossword-style clues, progressing from harder to easier. Use fewer hints for a better score!</p>
-      <p>You have <strong>4 attempts</strong> to guess the correct word. Good luck!</p>
+      <p><strong>Need more help?</strong> Use the "Get Hint" button below the puzzle to reveal crossword-style clues, progressing from harder to easier.
+      Use fewer hints for a better score!</p>
+      <p>You have <strong>4 attempts</strong> to guess the correct word.
+      Good luck!</p>
       <p><strong>📖 Classic</strong> puzzles use dictionary words throughout.<br>
       <strong>🌍 Cultural</strong> puzzles may include famous names, brands, or places — as the mystery word or even among the clues.</p>
       <hr style="margin: 16px 0; border: none; border-top: 1px solid #ddd;">
       <p style="margin-bottom: 8px;"><strong>Reset Progress</strong></p>
       <p style="font-size: 11px; color: #666; margin-bottom: 10px;">Start over from scratch — this will clear all solved puzzles.</p>
-      <button onclick="resetProgress()" style="padding: 8px 16px; background: #ef4444; color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 12px; cursor: pointer;">Reset All Progress</button>
+      <button onclick="resetProgress()" style="padding: 8px 16px; background: #ef4444; color: white; border: 
+      none; border-radius: 8px; font-weight: 600; font-size: 12px; cursor: pointer;">Reset All Progress</button>
     </div>
   </div>
 </div>
@@ -1668,13 +1676,14 @@
         <input type="text" class="search-input" id="gallery-search" placeholder="Search by #, title, or any word..." autocomplete="off" oninput="filterGallery()">
         <button class="search-clear" id="search-clear" onclick="clearSearch()">×</button>
       </div>
+      
       <div class="search-results-info" id="search-results-info"></div>
       <div class="gallery-grid" id="gallery-grid"></div>
     </div>
   </div>
 </div>
 
-<script src="puzzles.js"></script>
+<script src="puzzle_db.js"></script>
 <script>
 
 let currentPuzzleIdx = 0;
@@ -1737,13 +1746,13 @@ function resetProgress() {
   
   // Clear the skip welcome preference too
   localStorage.removeItem('associology-skip-welcome');
-  
+
   // Reset in-memory state
   solvedPuzzles = {};
   
   // Close help modal
   closeHelp();
-  
+
   // Reload puzzle 1 fresh
   loadPuzzle(0);
   
@@ -1831,6 +1840,7 @@ function renderGallery() {
     item.onclick = function() { loadPuzzle(idx); closeGallery(); };
     g.appendChild(item);
   });
+
   // Re-apply search filter if there's a search term
   const searchInput = document.getElementById('gallery-search');
   if (searchInput && searchInput.value.trim()) {
@@ -1845,6 +1855,7 @@ function getSearchableText(puzzle) {
   parts.push(puzzle.title || '');
   parts.push(puzzle.centerWord || '');
   parts.push(...(puzzle.themes || []));
+
   // Add all solution words (anchors and bridges)
   if (puzzle.solution) {
     Object.values(puzzle.solution).forEach(word => parts.push(word));
@@ -1873,7 +1884,7 @@ function filterGallery() {
   const clearBtn = document.getElementById('search-clear');
   const resultsInfo = document.getElementById('search-results-info');
   const query = searchInput.value.trim();
-  
+
   // Show/hide clear button
   if (query) {
     clearBtn.classList.add('show');
@@ -1883,7 +1894,6 @@ function filterGallery() {
   
   const items = document.querySelectorAll('.gallery-item');
   let visibleCount = 0;
-  
   items.forEach(item => {
     const idx = parseInt(item.dataset.idx);
     const puzzle = PUZZLES[idx];
@@ -1905,7 +1915,7 @@ function filterGallery() {
       }
     }
   });
-  
+
   // Update results info
   if (query) {
     resultsInfo.classList.add('show');
@@ -1932,6 +1942,16 @@ function loadPuzzle(idx) {
   // Update URL to reflect current puzzle
   updateURL(currentPuzzle.id);
 
+  // GOATCOUNTER: Track game play
+  // This forces GoatCounter to log a view for "?puzzle=X" even if the page didn't reload
+  if (window.goatcounter && window.goatcounter.count) {
+    window.goatcounter.count({
+        path:  location.pathname + '?puzzle=' + currentPuzzle.id,
+        title: 'Puzzle ' + currentPuzzle.id,
+        event: false,
+    });
+  }
+
   // Update progress indicator
   updateProgressIndicator();
   
@@ -1949,7 +1969,7 @@ function loadPuzzle(idx) {
   
   // Hide hints panel
   document.getElementById('hints-panel').classList.remove('show');
-  
+
   // Reset center circle if in guessing mode
   var circle = document.getElementById('center-circle');
   circle.classList.remove('guessing-mode', 'guessed', 'show');
@@ -1958,13 +1978,13 @@ function loadPuzzle(idx) {
   // Hide center panel and solved banner
   document.getElementById('center-panel').classList.remove('show');
   document.getElementById('solved-banner').classList.remove('show');
-  
+
   // Hide both button sets initially
   document.getElementById('game-buttons').style.display = '';
   document.getElementById('replay-buttons').style.display = 'none';
   
   initBoard();
-  
+
   // Check if this puzzle was previously solved
   if (solvedPuzzles[currentPuzzle.id]) {
     // Show in completed state
@@ -1985,7 +2005,8 @@ function showPreviouslySolvedState() {
   // Mark as solved
   solved = true;
   centerGuessed = true;
-  moves = 0; // We don't know their original score, so show 0
+  moves = 0;
+  // We don't know their original score, so show 0
   
   // Mark all slices and tokens as correct
   var slices = document.querySelectorAll('.slice');
@@ -2008,14 +2029,14 @@ function showPreviouslySolvedState() {
   // Show solved banner
   document.getElementById('solved-banner').innerHTML = '✓ Previously Completed';
   document.getElementById('solved-banner').classList.add('show');
-  
+
   // Show explanations
   document.getElementById('explanations').classList.add('show');
   
   // Show replay button instead of game buttons
   document.getElementById('game-buttons').style.display = 'none';
   document.getElementById('replay-buttons').style.display = 'flex';
-  
+
   // Show center panel with explanations (no score since we don't have original data)
   showCenterPanelPreviouslySolved();
 }
@@ -2024,7 +2045,7 @@ function showCenterPanelPreviouslySolved() {
   document.getElementById('center-word-display').textContent = currentPuzzle.centerWord;
   var panelList = document.getElementById('center-panel-list');
   panelList.innerHTML = '';
-  
+
   // Simple "previously solved" indicator instead of score
   var infoDiv = document.createElement('div');
   infoDiv.className = 'center-guess-info success';
@@ -2062,7 +2083,7 @@ function playAgain() {
   var letterCount = currentPuzzle.centerWord.length;
   circle.innerHTML = '<span class="letter-count">' + letterCount + '</span><span class="letter-label">letters</span>';
   circle.onclick = function() { openGuessModal(); };
-  
+
   // Reset slices
   var slices = document.querySelectorAll('.slice');
   for (var i = 0; i < slices.length; i++) {
@@ -2172,7 +2193,6 @@ function initBoard() {
     document.getElementById('svg').insertBefore(defs, slicesGroup); 
   }
   defs.innerHTML = '';
-  
   var labelAngles = [315, 45, 135, 225];
   for (var i = 0; i < labelAngles.length; i++) {
     var result = drawLabel(labelAngles[i], currentPuzzle.themes[i], "theme-" + i);
@@ -2240,7 +2260,6 @@ function shuffle() {
   document.getElementById('center-panel').classList.remove('show');
   document.getElementById('game-buttons').style.display = 'flex';
   hideExplanations();
-  
   var anchorPos = [1, 3, 5, 7], bridgePos = [0, 2, 4, 6];
   var anchorWords = anchorPos.map(function(p) { return currentPuzzle.solution[p]; });
   var bridgeWords = bridgePos.map(function(p) { return currentPuzzle.solution[p]; });
@@ -2291,7 +2310,6 @@ function renderGrid() {
 function handleDropClick(pos, event) {
   var drop = document.getElementById("drop-" + pos);
   var token = drop.querySelector('.token');
-  
   // If solved, show tooltip for all words
   if (solved) {
     var bridgePositions = [0, 2, 4, 6];
@@ -2410,7 +2428,6 @@ function checkGroups() {
 
 function showExplanations() {
   document.getElementById('explanations').classList.add('show');
-  
   if (!centerGuessed) {
     var circle = document.getElementById('center-circle');
     var len = currentPuzzle.centerWord.length;
@@ -2492,7 +2509,7 @@ function enterGuessingMode() {
     '<button class="center-submit" onclick="submitCenterGuess()">Submit</button>' +
     '<div class="center-wrong-guesses" id="center-wrong-guesses"></div>' +
     '</div>';
-  
+
   // Focus the input - do it immediately since this is triggered by user tap
   var input = document.getElementById('center-guess-input');
   if (input) {
@@ -2512,7 +2529,7 @@ function enterGuessingMode() {
       submitCenterGuess();
     }
   });
-  
+
   // Show hints panel below puzzle
   showHintsPanel();
   
@@ -2525,11 +2542,11 @@ function showHintsPanel() {
   var progressDiv = document.getElementById('hints-progress');
   var hintsContainer = document.getElementById('hints-container');
   var hintBtn = document.getElementById('panel-hint-btn');
-  
+
   // Clear previous content
   progressDiv.innerHTML = '';
   hintsContainer.innerHTML = '';
-  
+
   // Add progress dots
   for (var d = 0; d < 4; d++) {
     var dot = document.createElement('div');
@@ -2576,7 +2593,7 @@ function revealNextHintInPanel() {
   
   // Reveal next hint
   revealedHints.push(currentCount);
-  
+
   // Update hint display
   var hints = document.querySelectorAll('#hints-container .crossword-hint');
   if (hints[currentCount]) {
@@ -2608,7 +2625,7 @@ function submitCenterGuess() {
   var input = document.getElementById('center-guess-input');
   var guess = input.value.trim().toUpperCase();
   var answer = currentPuzzle.centerWord;
-  
+
   // Validate - must have content
   if (!guess) {
     input.classList.add('shake');
@@ -2631,12 +2648,12 @@ function submitCenterGuess() {
   wrongSpan.className = 'center-wrong-guess';
   wrongSpan.textContent = guess;
   wrongDiv.appendChild(wrongSpan);
-  
+
   // Clear input for next guess
   input.value = '';
   input.classList.add('shake');
   setTimeout(function() { input.classList.remove('shake'); }, 400);
-  
+
   // Check if out of attempts (4 max)
   if (guessAttempts >= maxAttempts) {
     showGuessingFailure();
@@ -2651,7 +2668,7 @@ function showGuessingSuccess() {
   circle.textContent = currentPuzzle.centerWord;
   circle.classList.add('guessed', 'celebrate');
   setTimeout(function() { circle.classList.remove('celebrate'); }, 500);
-  
+
   var hintsUsed = revealedHints.length;
   var msg = '🎉 Complete! Solved in <span id="final-moves">' + moves + '</span> moves + found <strong>' + currentPuzzle.centerWord + '</strong> in ' + guessAttempts + ' guess' + (guessAttempts > 1 ? 'es' : '');
   if (hintsUsed > 0) {
@@ -2693,7 +2710,7 @@ function exitGuessingMode() {
   var circle = document.getElementById('center-circle');
   circle.classList.remove('guessing-mode');
   circle.onclick = function() { openGuessModal(); };
-  
+
   // Hide hints panel
   document.getElementById('hints-panel').classList.remove('show');
   
@@ -2713,7 +2730,7 @@ function revealThemeHint(el, theme, meaning, idx) {
 // Calculate puzzle score
 function calculateScore(moveCount, hintCount, gaveUp) {
   var score = 1000;
-  
+
   // Ring stage scoring (moves)
   if (moveCount <= 4) {
     score += 100; // Perfect
@@ -2765,13 +2782,11 @@ function getScoreLabel(score) {
 function createScoreDisplay(moveCount, hintCount, gaveUp) {
   var score = calculateScore(moveCount, hintCount, gaveUp);
   var label = getScoreLabel(score);
-  
   var div = document.createElement('div');
   div.className = 'score-display';
   div.innerHTML = '<div class="score-number">' + score + '</div>' +
     '<div class="score-label ' + label.className + '">' + label.text + '</div>' +
     '<div class="score-breakdown">' + moveCount + ' moves • ' + hintCount + ' hint' + (hintCount !== 1 ? 's' : '') + (gaveUp ? ' • gave up' : '') + '</div>';
-  
   return div;
 }
 
@@ -2779,11 +2794,11 @@ function showCenterPanelRevealed() {
   document.getElementById('center-word-display').textContent = currentPuzzle.centerWord;
   var panelList = document.getElementById('center-panel-list');
   panelList.innerHTML = '';
-  
+
   // Add score display (gave up = true)
   var scoreDisplay = createScoreDisplay(moves, revealedHints.length, true);
   panelList.appendChild(scoreDisplay);
-  
+
   for (var theme in currentPuzzle.centerExplanations) {
     var meaning = currentPuzzle.centerExplanations[theme];
     var item = document.createElement('div');
@@ -2798,11 +2813,11 @@ function showCenterPanel(guessCount) {
   document.getElementById('center-word-display').textContent = currentPuzzle.centerWord;
   var panelList = document.getElementById('center-panel-list');
   panelList.innerHTML = '';
-  
+
   // Add score display (got it = not gave up)
   var scoreDisplay = createScoreDisplay(moves, revealedHints.length, false);
   panelList.appendChild(scoreDisplay);
-  
+
   for (var theme in currentPuzzle.centerExplanations) {
     var meaning = currentPuzzle.centerExplanations[theme];
     var item = document.createElement('div');
@@ -2817,11 +2832,11 @@ function showCenterPanelFailure() {
   document.getElementById('center-word-display').textContent = currentPuzzle.centerWord;
   var panelList = document.getElementById('center-panel-list');
   panelList.innerHTML = '';
-  
+
   // Add score display (gave up after 4 wrong guesses)
   var scoreDisplay = createScoreDisplay(moves, revealedHints.length, true);
   panelList.appendChild(scoreDisplay);
-  
+
   for (var theme in currentPuzzle.centerExplanations) {
     var meaning = currentPuzzle.centerExplanations[theme];
     var item = document.createElement('div');
@@ -2848,7 +2863,8 @@ function startPlaying() {
 
 // Initialize welcome board ring
 function initWelcomeBoard() {
-  var puzzle = PUZZLES[0]; // Use Puzzle 1
+  var puzzle = PUZZLES[0];
+  // Use Puzzle 1
   var welcomeSlices = document.getElementById('welcome-slices');
   var welcomeLabels = document.getElementById('welcome-labels');
   var welcomeDefs = document.getElementById('welcome-defs');
@@ -2914,10 +2930,8 @@ function initWelcomeBoard() {
 
 // Clear old localStorage key if present
 localStorage.removeItem('associology-welcomed');
-
 // Check if user opted to skip welcome screen
 var skipWelcome = localStorage.getItem('associology-skip-welcome');
-
 // A returning player is someone who either skipped welcome OR has solved puzzles
 var isReturningPlayer = skipWelcome || getSolvedCount() > 0;
 
@@ -2927,16 +2941,13 @@ if (isReturningPlayer) {
 
 // Initialize welcome board
 initWelcomeBoard();
-
 // Update puzzle count on welcome screen
 document.querySelector('.welcome-footer span:last-child').textContent = PUZZLES.length + ' puzzles';
-
 // Update jump input max attribute with puzzle count
 document.getElementById('jump-input').max = PUZZLES.length;
 
 // Check URL for specific puzzle first
 var urlPuzzleIdx = getPuzzleFromURL();
-
 // Priority: URL parameter > returning player progress > puzzle 1
 var startIdx;
 if (urlPuzzleIdx !== null) {
@@ -2950,7 +2961,10 @@ if (urlPuzzleIdx !== null) {
 }
 loadPuzzle(startIdx);
 </script>
-  <script data-goatcounter="https://botmankoff.goatcounter.com/count"
+
+<script data-goatcounter="https://botmankoff.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
 </body>
 </html>
+}
